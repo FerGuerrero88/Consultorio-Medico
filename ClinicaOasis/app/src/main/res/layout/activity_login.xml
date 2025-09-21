@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona tu perfil"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Scroll horizontal con los usuarios -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:id="@+id/userListLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" />
+        </HorizontalScrollView>
+
+        <!-- Zona de login envuelta en un recuadro -->
+        <LinearLayout
+            android:id="@+id/layoutLoginZone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:text="Usuario seleccionado"
+            android:elevation="6dp"
+            android:background="@drawable/card_background_dos"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="visible">
+
+            <!-- Imagen perfil seleccionado grande -->
+            <ImageView
+                android:id="@+id/imageViewSelectedProfile"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/perfil3"
+                android:scaleType="centerCrop"
+                android:visibility="visible" />
+
+            <!-- Nombre del usuario -->
+            <TextView
+                android:id="@+id/textViewSelectedName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuario"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Contraseña -->
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="#111111"
+                android:textColorHint="#888888"
+                android:background="@drawable/edit_text_background"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Mostrar contraseña -->
+            <CheckBox
+                android:id="@+id/checkBoxShowPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar contraseña"
+                android:textColor="#444444"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Botón de Iniciar Sesión -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iniciar Sesión"
+                android:visibility="gone"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Botón para eliminar perfil -->
+            <Button
+                android:id="@+id/btnDeleteProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Eliminar"
+                android:visibility="gone"
+                android:backgroundTint="#F44336"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+        <!-- Botón de Registro SIEMPRE visible -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrarse"
+            android:visibility="visible"
+            android:textColor="@color/text_black"
+            android:backgroundTint="#2196F3"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp" />
+
+    </LinearLayout>
+</ScrollView>
